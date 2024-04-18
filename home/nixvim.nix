@@ -12,7 +12,9 @@
 	defaultEditor = true;
 	colorschemes.catppuccin = {
 	    enable = true;
-	    transparentBackground = true;
+	    settings = {
+		transparent_background = true;
+	    };
 	};
 	# Keymaps 
 	keymaps = [
@@ -69,14 +71,17 @@
 		{ name = "luasnip";}
 		#{ name = "vsnip"; }
 	    ];
+	    settings.snippet = {
+		expand = "function(args) require('luasnip').lsp_expand(args.body) end"; 
+	    };
 	    settings.mapping = {
 		"<C-Space>" = "cmp.mapping.complete()";
 		"<C-d>" = "cmp.mapping.scroll_docs(-4)";
 		"<C-e>" = "cmp.mapping.close()";
 		"<C-f>" = "cmp.mapping.scroll_docs(4)";
-		"<CR>" = "cmp.mapping.confirm({ select = true })";
-		"<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
-		"<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+		"<C-y>" = "cmp.mapping.confirm({ select = true })";
+		"<UP>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+		"<DOWN>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
 	    };
 	};
 	plugins.cmp-nvim-lsp.enable = true;
@@ -90,27 +95,36 @@
 	    keymaps = {
 		"<leader>sh" = {
 		    action = "help_tags";
-		    desc = "[S]earch [H]elp";
+		    options = {
+			desc = "[S]earch [H]elp";
+		    };
 		};
 		"<leader>sf" = {
 		    action = "find_files";
-		    desc = "[S]earch [F]iles";
+		    options = {
+			desc = "[S]earch [F]iles";
+		    };
 		};
 		"<leader>sk" = {
 		    action = "keymaps";
-		    desc = "[S]earch [K]eymaps";
+		    options = {
+			desc = "[S]earch [K]eymaps";
+		    };
 		};
 		"<leader>sw" = {
 		    action = "grep_string";
-		    desc = "[S]earch current [W]ord";
+		    options = {
+			desc = "[S]earch current [W]ord";
+		    };
 		};
 	    };
 	};
 	# Lualine 
 	plugins.lualine.enable = true;
 	# luasnip
-	plugins.luasnip.enable = true;
-	# plugins.vsnip.enable = true;
+	plugins.luasnip = {
+	    enable = true;
+	};
 	# harpoon
 	plugins.harpoon = {
 	    enable = true;
