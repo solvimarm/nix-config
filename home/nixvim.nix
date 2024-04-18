@@ -66,8 +66,8 @@
 		{ name = "nvim_lsp";}
 		{ name = "path";}
 		{ name = "buffer";}
-		# { name = "luasnip";}
-		{ name = "vsnip"; }
+		{ name = "luasnip";}
+		#{ name = "vsnip"; }
 	    ];
 	    settings.mapping = {
 		"<C-Space>" = "cmp.mapping.complete()";
@@ -80,8 +80,8 @@
 	    };
 	};
 	plugins.cmp-nvim-lsp.enable = true;
-	# plugins.cmp_luasnip.enable = true;
-	plugins.cmp-vsnip.enable = true; 
+	plugins.cmp_luasnip.enable = true;
+	#plugins.cmp-vsnip.enable = true; 
 	# Treesitter
 	plugins.treesitter.enable = true;
 	# Telescope
@@ -110,6 +110,7 @@
 	plugins.lualine.enable = true;
 	# luasnip
 	plugins.luasnip.enable = true;
+	# plugins.vsnip.enable = true;
 	# harpoon
 	plugins.harpoon = {
 	    enable = true;
