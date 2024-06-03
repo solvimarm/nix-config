@@ -28,7 +28,7 @@
 	    }
 	];
 	# Plugins 
-
+	
 	plugins.surround.enable = true;
 	# Git
 	plugins.fugitive.enable = true;
