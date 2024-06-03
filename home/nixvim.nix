@@ -30,7 +30,8 @@
 	# Plugins 
 
 	plugins.surround.enable = true;
-
+	# Git
+	plugins.fugitive.enable = true;
 	# file manager 
 	plugins.oil.enable = true; # file manager 
 	# lsp setup
