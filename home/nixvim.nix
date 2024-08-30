@@ -20,7 +20,7 @@
 	keymaps = [
 	    {
 		action = "<CMD>Oil<CR>";
-		key = "<leader>pv";
+		key = "<leader>pv --float";
 		options = {
 		    silent = true;
 		    desc = "Open Oil in floting window";
