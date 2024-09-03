@@ -31,6 +31,7 @@
 		pass
 		#gnupg
 		#pinentry-all
+		openconnect
 	];
 
 
