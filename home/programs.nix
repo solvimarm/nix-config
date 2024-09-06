@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs,inputs,... }:
 
 {
 	# Direnv 
@@ -32,8 +32,10 @@
 		#gnupg
 		#pinentry-all
 		openconnect
+		inputs.nixvim_flake.packages.x86_64-linux.default
 	];
 
+#	programs.nixvim_flake.enable = true;
 
 	programs.fzf = {
 	    enable = true;

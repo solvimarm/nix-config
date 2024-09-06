@@ -16,9 +16,11 @@
     };
     # nix color scheme
     nix-colors.url = "github:misterio77/nix-colors";
+
+    nixvim_flake.url = "github:solvimarm/nixvim";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nixvim, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, nixvim, nixvim_flake, ... }: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.nixos= nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -26,6 +28,8 @@
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
         ./configuration.nix
+	#nixvim_flake.packages.x86_64-linux.default
+	
 
         # home manager 
         home-manager.nixosModules.home-manager{

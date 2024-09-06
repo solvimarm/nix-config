@@ -5,6 +5,7 @@
 	imports = [
 		inputs.nix-colors.homeManagerModules.default
 		inputs.nixvim.homeManagerModules.nixvim
+		#inputs.nixvim_flake.programs.x86_64-linux.default
 #		./tmux.nix
 		./alacritty.nix
 		./git.nix
@@ -12,7 +13,7 @@
 		./zsh.nix
 		./zellij.nix
 		./starship.nix
-		./nixvim.nix
+#		./nixvim.nix
 #		./window_manager/hyprlock.nix
 		#./qutebrowser/qutebrowser.nix
 	];
@@ -28,6 +29,7 @@
 	#	tmux
 	#	neofetch
 	#];
+	
 
 	home.stateVersion = "24.05";
 

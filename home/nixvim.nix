@@ -199,6 +199,7 @@
 	    vim-dadbod-ui
 	    vim-dadbod-completion
 	    elixir-tools-nvim
+	    nvim-jqx
 	];
 	extraConfigLua = "
 	    require('elixir').setup({
