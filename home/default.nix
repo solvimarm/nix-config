@@ -8,12 +8,12 @@
 		#inputs.nixvim_flake.programs.x86_64-linux.default
 #		./tmux.nix
 		./alacritty.nix
+		./bat.nix
 		./git.nix
 		./programs.nix
 		./zsh.nix
 		./zellij.nix
 		./starship.nix
-		./kitty.nix
 #		./nixvim.nix
 #		./window_manager/hyprlock.nix
 		#./qutebrowser/qutebrowser.nix
