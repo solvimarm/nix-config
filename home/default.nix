@@ -13,6 +13,7 @@
 		./zsh.nix
 		./zellij.nix
 		./starship.nix
+		./kitty.nix
 #		./nixvim.nix
 #		./window_manager/hyprlock.nix
 		#./qutebrowser/qutebrowser.nix

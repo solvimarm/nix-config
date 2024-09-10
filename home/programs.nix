@@ -32,6 +32,7 @@
 		#gnupg
 		#pinentry-all
 		openconnect
+		ripgrep
 		inputs.nixvim_flake.packages.x86_64-linux.default
 	];
 

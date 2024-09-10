@@ -151,7 +151,7 @@
 	mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
   	})
     )
-    kitty
+    #kitty
     networkmanagerapplet
     openssl
     git
