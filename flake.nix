@@ -20,7 +20,7 @@
     nixvim_flake.url = "github:solvimarm/nixvim";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nixvim, nixvim_flake, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, nixvim_flake, ... }: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.nixos= nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -38,6 +38,8 @@
           home-manager.useUserPackages = true;
 
           home-manager.users.solvi = import ./home;
+
+	  home-manager.backupFileExtension = "backup";
         }
         # nixvim
        # #nixvim.homeManagerModules.nixvim

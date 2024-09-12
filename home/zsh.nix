@@ -6,11 +6,12 @@
 	dotDir = ".config/zsh";
 	enableCompletion = true;
 
+	# eval "$(zellij setup --generate-auto-start zsh)"
 	# Extra commands
 	initExtra = ''
 	eval "$(zoxide init zsh)"
-	eval "$(zellij setup --generate-auto-start zsh)"
 	eval "$(starship init zsh)"
+	eval "$(direnv hook zsh)"
 	'';
 
 	
@@ -22,7 +23,7 @@
 	};
 
 	# plugins 
-	plugins = with pkgs; [ 
+	plugins = [ 
 	    {
 		name = "zsh-syntax-highlighting";
 		src = pkgs.fetchFromGitHub {

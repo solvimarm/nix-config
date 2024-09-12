@@ -8,6 +8,7 @@
 		#inputs.nixvim_flake.programs.x86_64-linux.default
 #		./tmux.nix
 		./alacritty.nix
+		./kitty.nix
 		./bat.nix
 		./git.nix
 		./programs.nix

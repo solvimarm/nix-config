@@ -65,7 +65,8 @@
     
   
   # Enable ZSH shell
-#  users.defaultUserShell = pkgs.zsh;
+  users.defaultUserShell = pkgs.zsh;
+  programs.zsh.enable = true;
 #  users.users.solvi.shell = pkgs.zsh;
 #  programs.zsh = {
 #	enable = true;
