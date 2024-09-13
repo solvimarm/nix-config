@@ -9,9 +9,14 @@
 	# eval "$(zellij setup --generate-auto-start zsh)"
 	# Extra commands
 	initExtra = ''
+
+	bindkey -r '^T'
+	bindkey -s '^T' '~/nixos/home/term_session/tab_switcher \n'
+
 	eval "$(zoxide init zsh)"
 	eval "$(starship init zsh)"
 	eval "$(direnv hook zsh)"
+
 	'';
 
 	

@@ -51,5 +51,8 @@
 	    pinentryPackage = pkgs.pinentry.gnome3;
 	    extraConfig = ''allow-loopback-pinentry'';
 	};
-	
+
+
+
+
 }
