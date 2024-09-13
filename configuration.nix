@@ -82,8 +82,8 @@
   virtualisation.docker.enable = true;
   # Hyprland configuration 
   # programs.hyprland.enable = true; 
-  # xdg.portal.enable = true;
-  # xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.enable = true;
+  #xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   # Configure console keymap
   console.keyMap = "is-latin1";
 
@@ -170,6 +170,10 @@
     # TMP need to remove later
     htop
     #pinentry-curses
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-hyprland
+    xwayland
+    wl-clipboard
   ];
   # Fonts
   fonts.fontDir.enable = true;
