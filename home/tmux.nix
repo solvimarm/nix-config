@@ -14,10 +14,10 @@
 			# status bar 
 			set -g status-position top
 			# vim like movement
-			bind -r k select-pane -U
-			bind -r j select-pane -D
-			bind -r h select-pane -L
-			bind -r l select-pane -R
+			# bind -r k select-pane -U
+			# bind -r j select-pane -D
+			# bind -r h select-pane -L
+			# bind -r l select-pane -R
 
 			# Start windows and panes at 1, not 0
 			set -g base-index 1
@@ -26,15 +26,20 @@
 			set-option -g renumber-windows on
 
 			# Pane management
-			bind  %  split-window -h -c "#{pane_current_path}"
-			bind '"' split-window -v -c "#{pane_current_path}"
+			# bind  %  split-window -h -c "#{pane_current_path}"
+			# bind '"' split-window -v -c "#{pane_current_path}"
+			#
+			# bind c new-window -c "#{pane_current_path}"
+			#
+			#
+			# bind x kill-pane	
+			# bind & kill-window
 
-			bind c new-window -c "#{pane_current_path}"
-
-
-			bind x kill-pane	
-			bind & kill-window
-
+		    # vim - tmux 
+		    set -g @vim_navigator_mapping_left "C-w-h"  
+		    set -g @vim_navigator_mapping_right "C-w-l"
+		    set -g @vim_navigator_mapping_up "C-w-k"
+		    set -g @vim_navigator_mapping_down "C-w-j"
 
 
 		'';
@@ -50,6 +55,10 @@
 			}
 			{
 				plugin = tmuxPlugins.session-wizard;
+			}
+			{
+
+			    plugin = tmuxPlugins.vim-tmux-navigator;
 			}
 		];
 

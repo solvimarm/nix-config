@@ -569,11 +569,11 @@
         "nixvim": "nixvim_2"
       },
       "locked": {
-        "lastModified": 1726149356,
-        "narHash": "sha256-pwl6tOF+zLf7jhPzj+MfArr/Br5a6iBmGtTrIbdUmx4=",
+        "lastModified": 1726489194,
+        "narHash": "sha256-6k1E2Oclp3geYUUmKLNInOxND2gHDE0l9HO57a23Fmo=",
         "owner": "solvimarm",
         "repo": "nixvim",
-        "rev": "631c8451d28b98080148cdc577642dfb171819d1",
+        "rev": "c3f215fb3e21c40666ecc90cc065c959ef5cb70a",
         "type": "github"
       },
       "original": {
