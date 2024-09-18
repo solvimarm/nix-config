@@ -15,6 +15,7 @@
 		./zsh.nix
 		./zellij.nix
 		./starship.nix
+		./lazygit.nix
 #		./nixvim.nix
 #		./window_manager/hyprlock.nix
 		#./qutebrowser/qutebrowser.nix

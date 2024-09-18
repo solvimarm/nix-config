@@ -36,6 +36,7 @@
 		openconnect
 		ripgrep
 		inputs.nixvim_flake.packages.x86_64-linux.default
+		smug
 	];
 
 #	programs.nixvim_flake.enable = true;

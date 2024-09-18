@@ -1,4 +1,5 @@
-{ pkgs, ...}:
+{ pkgs, inputs, ...}:
+
 
 {
 	programs.tmux = {
@@ -13,12 +14,6 @@
 		extraConfig = ''
 			# status bar 
 			set -g status-position top
-			# vim like movement
-			# bind -r k select-pane -U
-			# bind -r j select-pane -D
-			# bind -r h select-pane -L
-			# bind -r l select-pane -R
-
 			# Start windows and panes at 1, not 0
 			set -g base-index 1
 			set -g pane-base-index 1
@@ -35,15 +30,37 @@
 			# bind x kill-pane	
 			# bind & kill-window
 
-		    # vim - tmux 
-		    set -g @vim_navigator_mapping_left "C-w-h"  
-		    set -g @vim_navigator_mapping_right "C-w-l"
-		    set -g @vim_navigator_mapping_up "C-w-k"
-		    set -g @vim_navigator_mapping_down "C-w-j"
+		      # Smart pane switching with awareness of vim splits.
+		      # See: https://github.com/christoomey/vim-tmux-navigator
+			     is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
+			| grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|l?n?vim?x?|fzf)(diff)?$'"
 
+			# Define a custom key table called 'navigate'
+			bind-key -T navigate h select-pane -L  # Navigate left
+			bind-key -T navigate j select-pane -D  # Navigate down
+			bind-key -T navigate k select-pane -U  # Navigate up
+			bind-key -T navigate l select-pane -R  # Navigate right
+
+			# Bind 'Ctrl-w' to enter the 'navigate' key table
+			# bind-key -n C-w switch-client -T navigate
+
+			# Rebind the keys for copy-mode-vi to work with 'Ctrl-w' prefix
+			# bind-key -T copy-mode-vi 'C-w' switch-client -T navigate
+			
+			set -g @plugin 'omerxx/tmux-sessionx'
+
+	    		set -g @sessionx-bind 'o'
+			run '~/.tmux/plugins/tpm/tpm'
 
 		'';
 		plugins = with pkgs; [
+			# {
+			#      plugin = inputs.tmux_sessionx.packages.x86_64-linux.default; 
+			#      extraConfig = ''
+			#      set -g @sessionx-bind 'O'
+			#      '';
+			#
+			# }
 			{
 				plugin = tmuxPlugins.catppuccin;
 				extraConfig = ''
@@ -53,13 +70,9 @@
 			{
 				plugin = tmuxPlugins.tmux-fzf;
 			}
-			{
-				plugin = tmuxPlugins.session-wizard;
-			}
-			{
-
-			    plugin = tmuxPlugins.vim-tmux-navigator;
-			}
+			# {
+			# 	plugin = tmuxPlugins.session-wizard;
+			# }
 		];
 
 	};

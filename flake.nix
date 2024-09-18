@@ -18,9 +18,11 @@
     nix-colors.url = "github:misterio77/nix-colors";
 
     nixvim_flake.url = "github:solvimarm/nixvim";
+
+    tmux_sessionx.url = "github:omerxx/tmux-sessionx";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, nixvim_flake, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, nixvim_flake, tmux_sessionx, ... }: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.nixos= nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
