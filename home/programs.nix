@@ -37,6 +37,8 @@
 		ripgrep
 		inputs.nixvim_flake.packages.x86_64-linux.default
 		smug
+		docker-compose
+		inputs.zen-browser.packages.x86_64-linux.default
 	];
 
 #	programs.nixvim_flake.enable = true;

@@ -20,9 +20,12 @@
     nixvim_flake.url = "github:solvimarm/nixvim";
 
     tmux_sessionx.url = "github:omerxx/tmux-sessionx";
+
+    # zen browser
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, nixvim_flake, tmux_sessionx, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, nixvim_flake, tmux_sessionx, zen-browser, ... }: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.nixos= nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
