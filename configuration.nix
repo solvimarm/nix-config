@@ -87,13 +87,13 @@
   # Configure console keymap
   console.keyMap = "is-latin1";
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-  services.avahi = {
-    enable = true;
-    nssmdns = true;
-    openFirewall = true;
-  };
+  # # Enable CUPS to print documents.
+  # services.printing.enable = true;
+  # services.avahi = {
+  #   enable = true;
+  #   nssmdns = true;
+  #   openFirewall = true;
+  # };
 
   # Enable sound with pipewire.
   #sound.enable = true;
