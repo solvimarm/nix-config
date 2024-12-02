@@ -39,6 +39,12 @@
 		smug
 		docker-compose
 		inputs.zen-browser.packages.x86_64-linux.default
+		catppuccin-cursors.mochaDark
+		catppuccin-cursors.mochaLight
+		catppuccin-cursors.mochaBlue
+		catppuccin-cursors.mochaMauve
+		nwg-look
+		obsidian
 	];
 
 #	programs.nixvim_flake.enable = true;

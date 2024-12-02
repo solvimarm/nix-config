@@ -52,6 +52,11 @@ bind k select-window -t 3
 bind l select-window -t 4
 bind ð select-window -t 5
 
+bind y select-window -t 1
+bind h select-window -t 2
+bind a select-window -t 3
+bind e select-window -t 4
+bind i select-window -t 5
 
 #Rebind the keys for copy-mode-vi to work with 'Ctrl-w' prefix
 bind-key -T copy-mode-vi 'C-w' switch-client -T navigate

@@ -4,7 +4,7 @@
 {
 	imports = [
 		inputs.nix-colors.homeManagerModules.default
-		inputs.nixvim.homeManagerModules.nixvim
+##		inputs.nixvim.homeManagerModules.nixvim
 		#inputs.nixvim_flake.programs.x86_64-linux.default
 		./tmux.nix
 		./alacritty.nix

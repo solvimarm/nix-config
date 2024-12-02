@@ -174,6 +174,7 @@
     xdg-desktop-portal-hyprland
     xwayland
     wl-clipboard
+    hyprcursor
   ];
   # Fonts
   fonts.fontDir.enable = true;

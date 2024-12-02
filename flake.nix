@@ -9,11 +9,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nixvim = {
+    #   url = "github:nix-community/nixvim";
+    #   # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     # nix color scheme
     nix-colors.url = "github:misterio77/nix-colors";
 
@@ -25,7 +25,7 @@
     zen-browser.url = "github:MarceColl/zen-browser-flake";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, nixvim_flake, tmux_sessionx, zen-browser, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim_flake, tmux_sessionx, zen-browser, ... }: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.nixos= nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
