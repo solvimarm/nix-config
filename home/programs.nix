@@ -44,7 +44,6 @@
 		catppuccin-cursors.mochaBlue
 		catppuccin-cursors.mochaMauve
 		nwg-look
-		obsidian
 	];
 
 #	programs.nixvim_flake.enable = true;
