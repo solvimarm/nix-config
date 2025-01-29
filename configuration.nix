@@ -175,6 +175,7 @@
     xwayland
     wl-clipboard
     hyprcursor
+    obsidian
   ];
   # Fonts
   fonts.fontDir.enable = true;
