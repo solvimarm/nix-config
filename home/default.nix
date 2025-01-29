@@ -17,6 +17,7 @@
 		./starship.nix
 		./lazygit.nix
 #		./nixvim.nix
+		./yazi.nix
 #		./window_manager/hyprlock.nix
 		#./qutebrowser/qutebrowser.nix
 	];
