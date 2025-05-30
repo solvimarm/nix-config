@@ -22,7 +22,17 @@
     tmux_sessionx.url = "github:omerxx/tmux-sessionx";
 
     # zen browser
-    zen-browser.url = "github:MarceColl/zen-browser-flake";
+    # zen-browser.url = "github:MarceColl/zen-browser-flake";
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+
+    # Ghostty
+    ghostty.url = "github:ghostty-org/ghostty";
+
+    # Helix Editor
+    helix.url = "github:helix-editor/helix";
+
+    # Wezterm
+    # wezterm.url = "github:wezterm/wezterm?dir=nix";
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, nixvim_flake, tmux_sessionx, zen-browser, ... }: {
@@ -44,8 +54,10 @@
 
           home-manager.users.solvi = import ./home;
 
-	  home-manager.backupFileExtension = "backup";
+	        home-manager.backupFileExtension = "backup";
         }
+
+       
         # nixvim
        # #nixvim.homeManagerModules.nixvim
       ];

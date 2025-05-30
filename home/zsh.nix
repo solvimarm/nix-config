@@ -5,24 +5,25 @@
 	enable = true;
 	dotDir = ".config/zsh";
 	enableCompletion = true;
+	autosuggestion.enable = true;
 
 	# eval "$(zellij setup --generate-auto-start zsh)"
 	# Extra commands
 	initExtra = ''
 
-	function tab_switcher() {
-	    kitty @ focus-tab --match title:$(kitty @ ls | \
-		jq -r '.[0].tabs[] | "\(.id)|\(.title)"' | \
-		fzf --layout=reverse \
-		    --height=10% \
-		    --border=rounded \
-		    --border=rounded \
-		    --margin=30%,30% \
-		    --padding=1 \
-		    --with-nth=1 \
-		 | \
-		awk '{print $0}')
-	}
+	# function tab_switcher() {
+	#     kitty @ focus-tab --match title:$(kitty @ ls | \
+	# 	jq -r '.[0].tabs[] | "\(.id)|\(.title)"' | \
+	# 	fzf --layout=reverse \
+	# 	    --height=10% \
+	# 	    --border=rounded \
+	# 	    --border=rounded \
+	# 	    --margin=30%,30% \
+	# 	    --padding=1 \
+	# 	    --with-nth=1 \
+	# 	 | \
+	# 	awk '{print $0}')
+	# }
 
 
 	export FZF_DEFAULT_OPTS=" \
@@ -34,8 +35,10 @@
 
 	# bindkey -r '^T'
 	# bindkey -s '^T' '~/nixos/home/term_session/tab_switcher \n'
-	zle -N tab_switcher
-	bindkey '^T' tab_switcher
+	# zle -N tab_switcher
+	# bindkey '^T' tab_switcher
+	#
+	alias ls="eza -la"
 
 	eval "$(zoxide init zsh)"
 	eval "$(starship init zsh)"

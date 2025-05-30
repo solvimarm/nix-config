@@ -7,13 +7,13 @@
 ##		inputs.nixvim.homeManagerModules.nixvim
 		#inputs.nixvim_flake.programs.x86_64-linux.default
 		./tmux.nix
-		./alacritty.nix
-		./kitty.nix
+		# ./alacritty.nix
+		# ./kitty.nix
 		./bat.nix
 		./git.nix
 		./programs.nix
 		./zsh.nix
-		./zellij.nix
+		# ./zellij.nix
 		./starship.nix
 		./lazygit.nix
 #		./nixvim.nix

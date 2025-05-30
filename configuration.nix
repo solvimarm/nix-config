@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, ... }:
+{ pkgs,lib, ... }:
 
 {
   imports =
@@ -55,13 +55,14 @@
 
   # Configure keymap in X11
   services.xserver = {
-   layout = "is";
-   xkbVariant = "";
+   xkb.layout = "is";
+   xkb.variant = "";
   };
 
   # Enable Neovim and set as default editor
   programs.neovim.enable = true;
-  programs.neovim.defaultEditor = true;
+  programs.neovim.defaultEditor = false;
+  environment.variables.EDITOR = "hx";
     
   
   # Enable ZSH shell
@@ -97,7 +98,8 @@
 
   # Enable sound with pipewire.
   #sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
+  # hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -176,12 +178,17 @@
     wl-clipboard
     hyprcursor
     obsidian
+    zellij
+    marksman
+    zk
+    eza
   ];
   # Fonts
   fonts.fontDir.enable = true;
-  fonts.packages= with pkgs; [
-    nerdfonts
-  ];
+  # fonts.packages= with pkgs; [
+  #   nerdfonts
+  # ];
+  fonts.packages = [ ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

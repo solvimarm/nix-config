@@ -44,6 +44,11 @@
 		catppuccin-cursors.mochaBlue
 		catppuccin-cursors.mochaMauve
 		nwg-look
+		inputs.ghostty.packages.x86_64-linux.default
+		inputs.helix.packages.x86_64-linux.default
+		wezterm
+		spotify-player
+		distrobox
 	];
 
 #	programs.nixvim_flake.enable = true;
