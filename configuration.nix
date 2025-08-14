@@ -148,7 +148,7 @@
    # alacritty
     rofi-wayland
     python3
-    microsoft-edge
+    # microsoft-edge
     waybar
     (pkgs.waybar.overrideAttrs (oldAttrs: {
 	mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
@@ -182,6 +182,7 @@
     marksman
     zk
     eza
+    vscode-fhs
   ];
   # Fonts
   fonts.fontDir.enable = true;

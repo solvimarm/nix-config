@@ -31,6 +31,9 @@
     # Helix Editor
     helix.url = "github:helix-editor/helix";
 
+    # Crush AI
+    crush.url = "path:./crush-ai";
+
     # Wezterm
     # wezterm.url = "github:wezterm/wezterm?dir=nix";
   };
