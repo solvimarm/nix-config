@@ -46,9 +46,14 @@
 		nwg-look
 		inputs.ghostty.packages.x86_64-linux.default
 		inputs.helix.packages.x86_64-linux.default
+		inputs.crush.packages.x86_64-linux.default
 		wezterm
 		spotify-player
 		distrobox
+		qutebrowser
+		ollama
+		aider-chat
+		bitwarden-cli
 	];
 
 #	programs.nixvim_flake.enable = true;
